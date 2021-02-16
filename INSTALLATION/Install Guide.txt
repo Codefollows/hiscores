@@ -1,0 +1,66 @@
+How to install (roughly):
+
+Step 1: Setup a database
+Go to your website cPanel and find "MySQL Databases" and enter this. Here you
+need to create a new database, username with a unique password, then assign the
+user to the database. Everything should be in order.
+
+KEEP NOTE OF WHAT YOU ENTER HERE. Write it down or save to a text file.
+
+==================================
+
+Step 2: Importing the SQL File
+Next, go back in to your cPanel main page and find "phpMyAdmin", this will open
+a new window. Once it's loaded, find the newly made database on the left side then
+click it. Across the top on the right section, click import and select the
+included SQL File. Click the button at the bottom to import it.
+
+==================================
+
+Step 3: Setting up the Website
+Make sure you've uploaded the hiscores to your desired folder, then proceed to
+the "assets" folder. Find the file called "constants.php"; This is where all of your
+configuration settings are. Edit the info as needed using the database info you
+made in Step 1.
+
+==================================
+
+Step 4: Adding server code
+Add the included .java file into your server project via Eclipse IDE (or your
+favorite editor). Fix the imports as necessary and edit the SQL info at the top.
+You will then need to edit the SQL info in the Java file.
+
+The HOST option should be your website ip address. Open your website cPanel and
+search for "Server Information". It should be listed next to either a "Dedicated IP"
+or "Shared IP Address".
+
+Everything else should match the configuration you entered in Step 1 or Step 3.
+
+================================== 
+
+Step 5: Running the Code
+To run the code, you only need to add 1 line to either login/logout method (or however
+you choose to do it, but those are my preferred ways):
+
+new Thread(new Highscores(player)).start();
+==================================
+
+Troubleshooting Steps:
+1.) If anything fails to load, please make sure your SQL info is correct in
+constants.php then try reloading the page.
+
+2.) Make sure that you've imported the included SQL file into the database you
+made in step 1. This will cause the page to partially load if the SQL file isn't
+imported. (May stop loading entirely)
+
+3.)If all else fails, try going to "Select PHP Version" in cPanel and set it to
+either 5.5 or 5.6. This should not break anything else but may be required for the
+hiscores to work properly.
+
+4.) If you are missing methods server-side, you will have to make them yourself.
+The naming of the methods should make it obvious as to what they are for.
+
+===============================
+THIS APPLICATION IS NOT TO BE REDISTRIBUTED IN ANY AWY WHATSOEVER. DOING SO WILL RESULT
+IN YOUR DOWNLOAD HISTORY ON MY STORE BEING REVOKED ALONG WITH YOUR RIGHTS TO MY SCRIPT.
+THERE ARE NO REFUNDS FOR THIS PRODUCT. COMES AS-IS.
